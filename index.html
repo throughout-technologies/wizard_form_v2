@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <title>My Form</title>
+</head>
+<body class="main">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-sm-9 col-md-6 col-lg-6 col-xl-5 text-center p-0 mt-3 ">
+        <div class="card px-0 pt-2 pb-0 mt-2 mb-3">
+          <h2><b>Register yourself</b></h2>
+          <p>Fill all form field to go to next step</p>
+          <form id="myform" class="overflow-hidden myform">
+            <ul id="progressbar">
+              <li class="active" id="personal"><strong>Personal</strong></li>
+              <li id="contact"><strong>Contact</strong></li>
+              <li id="education"><strong>Education</strong></li>
+              <li id="bank"><strong>Bank</strong></li>
+              <li id="confirm"><strong>Finish</strong></li>
+            </ul>
+            <div id="sf1" class="frm" style="display: block;">
+              <fieldset class="page" id="tab" >
+                <div class="form-card ">
+                  <h2 class="fs-title"><b>Personal Details</b></h2>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="fieldlabels">First Name *</label>
+                        <input  id="firstname"  type="text" name="First_Name" placeholder="First Name" class="form-control" required />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="fieldlabels">Last Name *</label>
+                      <input id="lastname"  type="text" name="Last_Name" placeholder="Last Name" class="form-control" required/>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="fieldlabels">Father's Name *</label>
+                      <input id="fathername"  type="text" name="Father_Name" placeholder="Father's Name" class="form-control" required/>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="fieldlabels">Date of Birth *</label>
+                      <input id="dob"  type="date" name="Date_Of_Birth"  class="form-control"/>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="fieldlabels">Gender </label>
+                      <select name="Gender"  id="gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="fieldlabels">Maritial Status  </label>
+                      <select name="Maritial_Status" id="marital">
+                        <option value="married">Unmarried</option>
+                        <option value="Unmarried">Married</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="fieldlabels">Aadhar No. *</label>
+                      <input id="aadhar"  type="number" name="Adhar_Number" placeholder="Aadhar No."  class="form-control" required/>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="fieldlabels">Pan No. *</label>
+                      <input id="pan"  type="text" name="Pan_Number" placeholder="Pan No." class="form-control"required/>
+                    </div>
+                  </div>
+                </div>
+                <button class="open1 next" type="button">Next</button>
+              </fieldset>
+            </div>
+            <div id="sf2" class="frm" style="display: none;">
+              <fieldset class="page" id="tab" >
+                <div class="form-card">
+                  <h2 class="fs-title"><b>Contact Details:</b></h2>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label class="fieldlabels">Email *</label>
+                      <input id="email" type="email" name="Email_ID" placeholder="Email Id" />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="fieldlabels">Contact No. *</label>
+                      <input id="contact" type="number" name="Contact_Number" placeholder="Contact No." />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="fieldlabels">Alternate Contact No. *</label>
+                      <input id="alternatecontact" type="number" name="Alternate_Number" placeholder="Alternate Contact No."/>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="fieldlabels">Pin Code *</label>
+                      <input id="pincode" type="number" name="Pin_Code" placeholder="Pin Code" />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="fieldlabels">State</label>
+                      <select id="state" name="State" id="state">
+                        <option value="state">Select State</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="fieldlabels">City</label>
+                      <select id="city" name="City" id="city">
+                        <option value="state">Select City</option>
+                      </select>
+                    </div>
+                    <div class="col-md-12">
+                      <label class="fieldlabels">Address *</label>
+                      <textarea id="address" name="Address" rows="2" cols="50"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <button class="backButton back1" type="button">Back</button> 
+                <button class="next open2" type="button">Next</button>
+              </fieldset>
+            </div>
+            <div id="sf3" class="frm" style="display: none;">
+              <fieldset class="page" id="tab" >
+                <div class="form-card">
+                  <h2 class="fs-title"><b>Education Details:</b></h2>
+                  <div class="row">
+                    <div class="col-md-12"><h3>10 <sup>th</sup> </h3></div>
+                    <div class="col-md-4">
+                      <label class="fieldlabels">Board: *</label>
+                        <select id="board10" name="Secondary_School_Bord" id="">
+                          <option value="StateBoard">State Board</option>
+                          <option value="CBSC">CBSC</option>
+                          <option value="ICSE">ICSE</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                      <label class="fieldlabels">Passing Year: *</label>
+                      <input type="number" id="pass10" name="Secondary_School_Year" class="pss" placeholder="Passing Year">
+                    </div>
+                    <div class="col-md-4">
+                      <label class="fieldlabels">Marks *</label>
+                      <input id="mark10" type="text" name="Secondary_School_Marks" placeholder="Marks/Total" />
+                    </div>
+                    <div class="col-md-12"><h3>12 <sup>th</sup> </h3></div>
+                    <div class="col-md-4">
+                      <label class="fieldlabels">Board: *</label>
+                        <select id="board12" name="Higher_Secondary_School_Board" id="">
+                          <option value="StateBoard">State Board</option>
+                          <option value="CBSC">CBSC</option>
+                          <option value="ICSE">ICSE</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                      <label class="fieldlabels">Passing Year: *</label>
+                      <input type="number" id="pass12" name="Higher_Secondary_School_Year" class="pss" placeholder="Passing Year">
+                    </div>
+                    <div class="col-md-4">
+                      <label class="fieldlabels">Marks *</label>
+                      <input id="mark12" type="text" name="Higher_Secondary_School_Marks" placeholder="Marks/Total Marks" />
+                    </div>
+                    <div class="col-md-12"><h3>Under Graduation</h3></div>
+                    <div class="col-md-12">
+                      <label class="fieldlabels">University Name:</label>
+                      <input id="universityUG" type="text" name="Under_Graduation_University" placeholder="University" />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="fieldlabels">Marks *</label>
+                      <input id="markUG" type="text" name="Under_Graduation_Marks" placeholder="Marks/Total Marks" />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="fieldlabels">Passing Year: *</label>
+                      <input type="number" id="passUG" name="Under_Graduation_Year" class="pss" placeholder="Passing Year">
+                    </div>
+                    <div class="col-md-12"><h3>Post Graduation</h3></div>
+                    <div class="col-md-12">
+                      <label class="fieldlabels">University Name:</label>
+                      <input id="universityPG" type="text" name="Post_Graduation_University" placeholder="University" />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="fieldlabels">Marks </label>
+                      <input id="markPG" type="text" name="Post_Graduation_Marks" placeholder="Marks/Total Marks" />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="fieldlabels">Passing Year: </label>
+                      <input type="number" id="passPG" name="Post_Graduation_Year" class="pss" placeholder="Passing Year">
+                    </div>
+                  </div>
+                </div>
+                <button class="backButton back2" type="button">Back</button> 
+                <button class="next open3" type="button">Next</button>
+              </fieldset>
+            </div>
+            <div id="sf4" class="frm" style="display: none;">
+              <fieldset class="page" id="tab" >
+                <div class="form-card">
+                  <h2 class="fs-title"><b>Bank Details:</b></h2>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <label class="fieldlabels">Account No.: *</label>
+                      <input id="accountnumber" type="number" name="Account_Number" placeholder="Account Number" />
+                    </div>
+                    <div class="col-md-12">
+                      <label class="fieldlabels">Bank Name : *</label>
+                      <input id="bankname" type="text" name="Bank_Name" placeholder="Bank Name" />
+                    </div>
+                    <div class="col-md-12">
+                      <label class="fieldlabels">IFSC Number: *</label>
+                      <input id="ifsc" type="text" name="IFSC_Code" placeholder="IFSC Number" />
+                    </div>
+                    <div class="col-md-12">
+                      <label class="fieldlabels">Branch Details : *</label>
+                      <textarea id="branchdetail" type="text" name="Branch_Name" placeholder="Branch Details" rows="3" cols="50"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <button class="backButton back3" type="button">Back</button> 
+                <button class="next open4" type="submit" >priview</button>
+              </fieldset>
+            </div>  
+
+            <div id="sf5" class="frm" style="display: none;">
+              <fieldset class="page" id="tab">
+                <div id="preview">
+
+                </div>
+                <button class="backButton back4" type="button">Back</button> 
+                <button class="next submit"  id="submit" type="button" >Submit</button>
+              </fieldset>
+            </div>
+            <!-- <button type="button" id="next">next</button> -->
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js" integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script type="module" src="JS/script.js"></script>
+  <script src="JS/validation.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
